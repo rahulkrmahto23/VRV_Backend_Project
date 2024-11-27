@@ -39,15 +39,7 @@ API Endpoints
 Authentication
 POST /signup
 Purpose: Register a new user.
-Body:
-json
-Copy code
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "securePassword",
-  "role": "CLIENT"
-}
+
 Response: User registration confirmation.
 POST /login
 Purpose: Authenticate an existing user.
@@ -67,15 +59,7 @@ GET /admin/users
 Purpose: Retrieve a list of all users.
 POST /admin/add-user
 Purpose: Add a new user.
-Body:
-json
-Copy code
-{
-  "name": "Jane Doe",
-  "email": "jane@example.com",
-  "password": "securePassword",
-  "role": "MODERATOR"
-}
+
 PUT /admin/update-user/:id
 Purpose: Update user details.
 DELETE /admin/delete-user/:id
@@ -87,19 +71,11 @@ Purpose: Approve or deny a moderator request.
 Body:
 json
 Copy code
-{
-  "status": "APPROVED",
-  "expiresIn": 30
-}
+
 Moderator Endpoints (Moderator Role Required)
 POST /moderator/request-permission
 Purpose: Request permission for an administrative action.
-Body:
-json
-Copy code
-{
-  "action": "UPDATE_USER"
-}
+
 GET /moderator/request-status
 Purpose: Check the status of the requested permission.
 GET /moderator/users/:id
